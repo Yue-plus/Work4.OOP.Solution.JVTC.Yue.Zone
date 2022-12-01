@@ -13,8 +13,11 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.collections.FXCollections?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import java.lang.String?>
 
-<VBox alignment="CENTER" prefHeight="320.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/19"
+<VBox alignment="CENTER" prefHeight="320.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/19" spacing="20.0"
       xmlns:fx="http://javafx.com/fxml" fx:controller="zone.yue.jvtc.solution.oop.work.UserRegistrationController">
   <GridPane alignment="CENTER" prefWidth="360.0">
     <columnConstraints>
@@ -33,13 +36,16 @@
   <HBox alignment="CENTER" prefHeight="0.0" prefWidth="360.0">
     <TitledPane animated="false" prefHeight="50.0" prefWidth="360.0" text="请选择性别：">
       <HBox alignment="CENTER" prefHeight="28.0" prefWidth="360.0">
-        <RadioButton mnemonicParsing="false" text="男"/>
-        <RadioButton mnemonicParsing="false" text="女"/>
+        <fx:define>
+          <ToggleGroup fx:id="sex"/>
+        </fx:define>
+        <RadioButton mnemonicParsing="false" toggleGroup="$sex" text="男"/>
+        <RadioButton mnemonicParsing="false" toggleGroup="$sex" text="女"/>
       </HBox>
     </TitledPane>
   </HBox>
   <HBox alignment="CENTER" prefHeight="0.0" prefWidth="360.0">
-    <Label fx:id="hobby" text="爱好："/>
+    <Label text="爱好："/>
     <CheckBox prefHeight="16.0" prefWidth="60.0" text="唱"/>
     <CheckBox prefHeight="16.0" prefWidth="60.0" text="跳"/>
     <CheckBox prefHeight="16.0" prefWidth="60.0" text="Rap"/>
@@ -48,7 +54,15 @@
   </HBox>
   <HBox alignment="CENTER" prefHeight="0.0" prefWidth="360.0">
     <Label text="所在省"/>
-    <ChoiceBox fx:id="local" prefWidth="150.0"/>
+    <ChoiceBox prefWidth="150.0" value="江西省">
+      <items>
+        <FXCollections fx:factory="observableArrayList">
+          <String fx:value="江西省"/>
+          <String fx:value="河北省"/>
+          <String fx:value="广东省"/>
+        </FXCollections>
+      </items>
+    </ChoiceBox>
   </HBox>
   <HBox alignment="CENTER" prefHeight="100.0" prefWidth="360.0">
     <Label text="简介："/>
