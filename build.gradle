@@ -24,8 +24,8 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainModule = 'zone.yue.jvtc.solution.oop.work4.work4'
-    mainClass = 'zone.yue.jvtc.solution.oop.work4.work4.HelloApplication'
+    mainModule = 'zone.yue.jvtc.solution.oop.work'
+    mainClass = 'zone.yue.jvtc.solution.oop.work.UserRegistrationApplication'
 }
 
 javafx {

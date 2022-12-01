@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" prefHeight="320.0" prefWidth="360.0" xmlns="http://javafx.com/javafx/19"
+      xmlns:fx="http://javafx.com/fxml" fx:controller="zone.yue.jvtc.solution.oop.work.UserRegistrationController">
+  <GridPane alignment="CENTER" prefWidth="360.0">
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="180.0" minWidth="10.0" prefWidth="64.0"/>
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="300.0" minWidth="10.0" prefWidth="300.0"/>
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <Label prefHeight="15.0" prefWidth="64.0" text="用户名称："/>
+    <TextField GridPane.columnIndex="1"/>
+    <Label prefHeight="15.0" prefWidth="64.0" text="用户密码：" GridPane.rowIndex="1"/>
+    <PasswordField GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+  </GridPane>
+  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="360.0">
+    <TitledPane animated="false" prefHeight="50.0" prefWidth="360.0" text="请选择性别：">
+      <HBox alignment="CENTER" prefHeight="28.0" prefWidth="360.0">
+        <RadioButton mnemonicParsing="false" text="男"/>
+        <RadioButton mnemonicParsing="false" text="女"/>
+      </HBox>
+    </TitledPane>
+  </HBox>
+  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="360.0">
+    <Label fx:id="hobby" text="爱好："/>
+    <CheckBox prefHeight="16.0" prefWidth="60.0" text="唱"/>
+    <CheckBox prefHeight="16.0" prefWidth="60.0" text="跳"/>
+    <CheckBox prefHeight="16.0" prefWidth="60.0" text="Rap"/>
+    <CheckBox prefHeight="16.0" prefWidth="60.0" text="篮球"/>
+    <CheckBox text="音乐"/>
+  </HBox>
+  <HBox alignment="CENTER" prefHeight="0.0" prefWidth="360.0">
+    <Label text="所在省"/>
+    <ChoiceBox fx:id="local" prefWidth="150.0"/>
+  </HBox>
+  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="360.0">
+    <Label text="简介："/>
+    <TextArea prefHeight="60.0" prefWidth="320.0"/>
+  </HBox>
+</VBox>

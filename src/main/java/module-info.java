@@ -1,8 +1,8 @@
-module zone.yue.jvtc.solution.oop.work4.work4 {
+module zone.yue.jvtc.solution.oop.work {
     requires javafx.controls;
     requires javafx.fxml;
 
 
-    opens zone.yue.jvtc.solution.oop.work4.work4 to javafx.fxml;
-    exports zone.yue.jvtc.solution.oop.work4.work4;
+    opens zone.yue.jvtc.solution.oop.work to javafx.fxml;
+    exports zone.yue.jvtc.solution.oop.work;
 }
